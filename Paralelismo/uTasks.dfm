@@ -1,0 +1,93 @@
+object FTasks: TFTasks
+  Left = 0
+  Top = 0
+  Caption = 'Tasks'
+  ClientHeight = 348
+  ClientWidth = 571
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 571
+    Height = 348
+    Align = alClient
+    TabOrder = 0
+    object Label6: TLabel
+      Left = 48
+      Top = 48
+      Width = 59
+      Height = 24
+      Caption = 'Label6'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 129
+      Top = 48
+      Width = 59
+      Height = 24
+      Caption = 'Label6'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 210
+      Top = 48
+      Width = 59
+      Height = 24
+      Caption = 'Label6'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Button8: TButton
+      Left = 202
+      Top = 78
+      Width = 75
+      Height = 25
+      Caption = 'Button6'
+      TabOrder = 0
+      OnClick = Button8Click
+    end
+    object Button7: TButton
+      Left = 121
+      Top = 78
+      Width = 75
+      Height = 25
+      Caption = 'Button6'
+      TabOrder = 1
+      OnClick = Button7Click
+    end
+    object Button6: TButton
+      Left = 40
+      Top = 78
+      Width = 75
+      Height = 25
+      Caption = 'Button6'
+      TabOrder = 2
+      OnClick = Button6Click
+    end
+  end
+end

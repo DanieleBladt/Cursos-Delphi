@@ -1,0 +1,20 @@
+unit Model.Venda;
+
+interface
+
+type
+  TModelVenda = class(TInterfacedObject, IModelVenda)
+    private
+      FItem: IModelItem;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New: IModelVenda;
+
+      function Item: IModelItem;
+  end;
+
+
+implementation
+
+end.

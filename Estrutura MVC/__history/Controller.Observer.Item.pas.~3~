@@ -1,0 +1,22 @@
+unit Controller.Observer.Item;
+
+interface
+
+uses
+  Controller.Observer.Interfaces;
+
+type
+  TControllerObserverItem = class(TInterfacedObject, ISubjectItem)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New:ISubjectItem;
+
+      function Add(Value: IObserverItem): ISubjectItem;
+      function Notify(Value: TRecordItem): ISubjectItem;
+  end;
+
+implementation
+
+end.

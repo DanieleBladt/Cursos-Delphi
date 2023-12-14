@@ -1,0 +1,23 @@
+unit Model.Interfaces;
+
+interface
+
+type
+  IModelItem = interface;
+
+  IModelVenda = interface
+  ['{70FC8780-AB43-4185-ACD6-54451D641794}']
+    function Item: IModelItem;
+    function ObserverItem(Value: ISubjectItem): IModelItem;
+  end;
+
+  IModelItem = interface
+  ['{41EA08E0-6340-44DB-AC09-47F4AA7176A8}']
+    function Codigo(Value: Integer): IModelItem;
+    function Vender: IModelItem;
+    function &End: IModelVenda;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,103 @@
+object FFuture: TFFuture
+  Left = 0
+  Top = 0
+  Caption = 'Future'
+  ClientHeight = 393
+  ClientWidth = 724
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 724
+    Height = 393
+    Align = alClient
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 32
+      Top = 40
+      Width = 59
+      Height = 24
+      Caption = 'Label1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 576
+      Top = 40
+      Width = 59
+      Height = 24
+      Caption = 'Label2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 576
+      Top = 84
+      Width = 59
+      Height = 24
+      Caption = 'Label2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 576
+      Top = 128
+      Width = 59
+      Height = 24
+      Caption = 'Label2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Button1: TButton
+      Left = 32
+      Top = 70
+      Width = 75
+      Height = 25
+      Caption = 'Normal'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 128
+      Top = 70
+      Width = 75
+      Height = 25
+      Caption = 'IFuture'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 584
+    Top = 240
+  end
+end

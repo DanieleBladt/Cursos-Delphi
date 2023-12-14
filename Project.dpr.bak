@@ -1,0 +1,19 @@
+program Project;
+
+uses
+  Vcl.Forms,
+  uCursoPararelismo in 'uCursoPararelismo.pas' {Form1},
+  uThreads in 'uThreads.pas' {Form2},
+  uFuture in 'uFuture.pas' {Form3},
+  uTasks in 'uTasks.pas' {Form4},
+  uLoading in 'uLoading.pas' {Form5},
+  uParallelFor in 'uParallelFor.pas' {Form6},
+  uGifLoading in 'uGifLoading.pas' {Form7};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1	Application.Run;
+end.

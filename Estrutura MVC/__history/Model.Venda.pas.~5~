@@ -1,0 +1,14 @@
+unit Model.Venda;
+
+interface
+
+type
+  TModelVenda = class(TInterfacedObject, IModelVenda)
+    private
+    public
+  end;
+
+
+implementation
+
+end.

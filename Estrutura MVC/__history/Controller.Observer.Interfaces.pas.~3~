@@ -1,0 +1,19 @@
+unit Controller.Observer.Interfaces;
+
+interface
+
+type
+  TRecordItem = record
+    Descricao: String;
+    Quantidade: Currency;
+    Valor: Currency;
+  end;
+
+  IObserverItem = interface
+  ['{57056CAF-55F2-4ACF-BF62-BFA0E4307910}']
+    function UpdateItem(Value: TRecordItem): IObserverItem;
+  end;
+
+implementation
+
+end.

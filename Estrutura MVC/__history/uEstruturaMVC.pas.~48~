@@ -1,0 +1,71 @@
+unit uEstruturaMVC;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Controller.Interfaces, Controller.Observer.Interfaces;
+
+type
+  TFEstruturaMVC = class(TForm, IObserverItem)
+    Panel1: TPanel;
+    Edit1: TEdit;
+    ListBox1: TListBox;
+    Button1: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    FVenda: IControllerVenda;
+    procedure VenderItem;
+    function UpdateItem(Value: TRecordItem): IObserverItem;
+  public
+    { Public declarations }
+  end;
+
+var
+  FEstruturaMVC: TFEstruturaMVC;
+
+implementation
+
+uses
+  Controller.Venda, Unit1;
+
+{$R *.dfm}
+
+
+procedure TFEstruturaMVC.Button1Click(Sender: TObject);
+begin
+  Form1.ExibirForm(FVenda);
+end;
+
+procedure TFEstruturaMVC.Edit1Change(Sender: TObject);
+begin
+  if Edit1.Text = '' then
+    Exit;
+
+  VenderItem;
+end;
+
+procedure TFEstruturaMVC.FormCreate(Sender: TObject);
+begin
+  FVenda := TControllerVenda.New;
+  FVenda.ObserverItem.Add(Self);
+end;
+
+function TFEstruturaMVC.UpdateItem(Value: TRecordItem): IObserverItem;
+begin
+  ListBox1.Items.Add(Value.Descricao);
+end;
+
+procedure TFEstruturaMVC.VenderItem;
+begin
+  FVenda
+    .Item
+    .Codigo(StrToInt(Edit1.Text))
+    .Vender;
+end;
+
+end.
